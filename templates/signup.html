@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block head %} {{ super() }}
+{% endblock head %}
+
+{% block nav %} {{ super() }}
+{% endblock nav %}
+
+{% block content %} {{ super() }}
+    <div class="container col-xl-12 col-md-8 px-6 py-5">
+      <form class="form-signup" method="POST" action="{{ url_for('auth.signup') }}">
+        <div class="row">
+          <div class="col-md-6">
+            <label>Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" required>
+          </div>
+          <div class="col-md-6">
+            <label>Sobrenome</label>
+            <input type="text" class="form-control" id="sobrenome" name="sobrenome" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="col-md-6">
+            <label>Senha</label>
+            <input type="password" class="form-control" id="senha" name="senha" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-10">
+            <label>Endereço</label>
+            <input type="text" class="form-control" id="endereco" name="endereco" required>
+          </div>
+          <div class="col-md-2">
+            <label>Nº</label>
+            <input type="text" class="form-control" id="numero" name="numero" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Cidade</label>
+            <input type="text" class="form-control" id="cidade" name="cidade" required>
+          </div>
+          <div class="col-md-3">
+            <label>Estado</label>
+            <select class="form-control" id="estado" name="estado" required>
+              <option selected>Selecione um estado...</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+              <option value="EX">Estrangeiro</option>
+          </select>
+          </div>
+          <div class="col-md-3">
+            <label>CEP</label>
+            <input type="text" class="form-control"  id="cep" name="cep" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="concordo" name="concordo" required>
+              <small class="form-check-label">
+                Estou de acordo com a coleta, armazenamento e tratamento dos dados pessoais indicados neste formulário, uma vez que concordo que utilizem meus dados para entrar em contato comigo em caso de oferecimento de eventuais propostas ou oportunidades de qualquer tipo.
+                <br> 
+                Ao cadastrar-me, eu automaticamente concordo com os 
+                <a href="/termos" alt="Termos de uso">Termos de Uso</a> e 
+                <a href="/politicas" alt="Politicas de Privacidade">Políticas de Privacidade</a> 
+                do sistema.
+            </small>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary align-items-center">Cadastrar-me</button>
+      </form>
+    </div>
+    {% endblock content %}
+
+{% block footer %} {{ super() }}
+{% endblock footer %}

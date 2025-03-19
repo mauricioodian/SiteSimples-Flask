@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block head %} {{ super() }}
+{% endblock head %}
+
+{% block nav %} {{ super() }}
+{% endblock nav %}
+
+{% block content %} {{ super() }}
+    <div class="container col-xl-4 col-md-6 px-4 py-5">
+        <div class="row align-items-center">
+            <form class="form-login" method="POST" action="{{ url_for('auth.login') }}">
+                <img class="mb-4" width="100px" height="100px" src="https://cdn-icons-png.flaticon.com/512/5087/5087607.png" alt="login logo">
+                <h1 class="h3 mb-3 fw-normal">Login</h1>
+                
+                <div class="form-floating m-2">
+                    <input type="email" class="form-control" placeholder="Digite o e-mail" id="email" name="email" required>
+                    <label for="floatingInput">E-mail</label>
+                </div>
+                <div class="form-floating m-2">
+                    <input type="password" class="form-control" placeholder="Digite a senha" id="senha" name="senha" required>
+                    <label for="floatingPassword">Senha</label>
+                </div>
+                <div class="align-content-center my-3">
+                    <a href="#" alt="Criar uma conta">Criar uma conta</a>
+                    <span>&MediumSpace;</span>
+                    <a href="#" alt="Esqueci minha senha">Esqueci minha senha</a>
+                </div>
+                <button class="btn btn-primary w-100 py-2" type="submit">Continuar</button>
+                <hr class="my-4">
+                <small class="text-muted">
+                    Ao utilizar o sistema, eu automaticamente concordo com seus 
+                    <a href="/termos" alt="Termos de uso">Termos de Uso</a> e 
+                    <a href="/politicas" alt="Politicas de Privacidade">Políticas de Privacidade</a>.
+                </small>
+            </form>
+        </div>
+    </div>
+    {% endblock content %}
+
+{% block footer %} {{ super() }}
+{% endblock footer %}

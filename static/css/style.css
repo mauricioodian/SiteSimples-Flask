@@ -1,0 +1,37 @@
+* {
+    font-family: "Arial", "Helvetica", serif;
+}
+
+.nav-link {
+    color:white !important;
+}
+
+.nav-link:hover {
+    background-color: #5c636a !important;
+    border-radius: 5px;
+}
+
+.navbar button a, button a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+form {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #bdbabb; 
+    border-radius: 5px;
+}
+
+.row {
+    padding: 10px 5px;
+}
+
+.form-login {
+    padding: 5px;
+    text-align: center; 
+}
+
+.form-signup {
+    padding: 15px;
+}
